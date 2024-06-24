@@ -15,7 +15,7 @@ $posts = $conn->query('SELECT * FROM posts ORDER BY created_at DESC')->fetch_all
       <div class="card mb-3">
 
         <div class="card-body">
-          <h5 class="card-title"><?= $post['title'] ?></h5>
+          <h5 class="card-title"><a href="pages/show.php?id=<?= $post['id'] ?>"><?= $post['title'] ?></a></h5>
           <span class="text-muted">Postado em <?= date('d/m/Y H:i', strtotime($post['created_at'])) ?></span>
           <br><br>
           <p class="card-text"><?= $post['description'] ?></p>
